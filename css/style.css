@@ -1,0 +1,59 @@
+*{ /*selecionar todos elementos*/
+    margin: 0; /*margem externa*/
+    padding: 0; /*margem interna*/
+}
+body{
+    background: rgb(171, 164, 175);
+    /*RGBA: A de transparencia*/
+}
+nav{
+    margin: 150px auto; /*margem requer 4 valores, 1º valor: cima, 2º: esquerdo, 3º: baixo, 4º: direito */
+    width: 450px;
+    height:450px;
+}
+#check { /*# para id*/
+    display: none;
+}
+
+#central{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin: 150px 150px;
+    z-index: 1;
+}
+
+#central img{
+    width: 100%;
+    border-radius: 50%;
+    transition: all .5s linear;
+}
+.link{ /*. (ponto) para classe*/
+    position: absolute;
+    margin: 195px 195px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all .5s linear;
+}
+#check:checked ~ a #link_01 /**/{
+    transform: translateY(-195px);
+    transition: all .5 linear;
+}
+#check:checked ~ a #link_02 /**/{
+    transform: translatex(195px);
+    transition: all .5 linear;
+}
+#check:checked ~ a #link_03 /**/{
+    transform: translateY(195px);
+    transition: all .5 linear;
+}
+#check:checked ~ a #link_04 /**/{
+    transform: translatex(-195px);
+    transition: all .5 linear;
+}
+
+#check:checked ~ #central img {
+    transform: rotate(135deg);
+}
